@@ -134,7 +134,9 @@ class Install:
                 else:
                     print(f"Already installed: {self.name}")
         except KeyboardInterrupt:
-            print("\nbye")
+            print("\nExiting...")
+            remove(f"{self.path}/{self.name}-{platform}")
+            exit()
 
 
 try:
@@ -185,7 +187,7 @@ if rustup:
                 "xztar",
                 Platform.All,
             ).build()
-            Install("nodejs").add_alias("").add_link(
+            Install("nodejs").add_link(
                 "https://nodejs.org/dist/v20.11.0/node-v20.11.0-win-x64.zip",
                 "zip",
                 Platform.Windows,
