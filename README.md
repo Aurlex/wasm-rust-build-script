@@ -1,4 +1,4 @@
-# wasm-rust-build-script
+# wasm-rust-build-script (works on my machine™)
 ### Builds rust crates which use libraries that link to system libraries.
 
 ## My recommendation is that if you need to build a WASM crate with c ffi, build for the wasm-wasi-preview1-threads target, as it does not require wasi-sdk.
